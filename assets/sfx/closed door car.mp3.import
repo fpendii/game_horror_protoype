@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dasjuqef0t435"
+path="res://.godot/imported/closed door car.mp3-54029c4989ab9d0a2aeb5d0e916ee880.mp3str"
+
+[deps]
+
+source_file="res://assets/sfx/closed door car.mp3"
+dest_files=["res://.godot/imported/closed door car.mp3-54029c4989ab9d0a2aeb5d0e916ee880.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

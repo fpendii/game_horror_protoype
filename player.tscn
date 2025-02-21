@@ -1,14 +1,36 @@
-[gd_scene load_steps=3 format=3 uid="uid://nxbnbyddxroq"]
+[gd_scene load_steps=5 format=3 uid="uid://nxbnbyddxroq"]
 
-[ext_resource type="Script" path="res://player.gd" id="1_5q8cv"]
+[ext_resource type="Script" path="res://Player2.gd" id="1_jf3g7"]
+[ext_resource type="AudioStream" uid="uid://bp8slhm56mhsq" path="res://assets/sfx/Fantozzi-footsteps/ogg/Fantozzi-SandL2.ogg" id="2_o5awf"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_o5yjp"]
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_s84oa"]
 
-[node name="Player" type="CharacterBody3D"]
-script = ExtResource("1_5q8cv")
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_gj0ud"]
 
-[node name="Camera3D" type="Camera3D" parent="."]
+[node name="Player" type="Node3D"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 2.10026, 0, 0, 0, 1, 0, -0.673833, 0)
-shape = SubResource("BoxShape3D_o5yjp")
+[node name="Player" type="CharacterBody3D" parent="."]
+script = ExtResource("1_jf3g7")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.09633, 0)
+mesh = SubResource("CapsuleMesh_s84oa")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.10049, 0)
+shape = SubResource("CapsuleShape3D_gj0ud")
+
+[node name="Head" type="Node3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.67495, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Player/Head"]
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Player/Head/Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0141191, 0, -0.0458889)
+spot_range = 15.0
+spot_angle = 30.0
+
+[node name="WalkingSoundPlayer" type="AudioStreamPlayer2D" parent="Player"]
+stream = ExtResource("2_o5awf")
+autoplay = true
+parameters/looping = false

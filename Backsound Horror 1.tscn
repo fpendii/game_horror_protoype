@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://bxl4clqspsrqo"]
+
+[ext_resource type="AudioStream" uid="uid://i0fe7t7e2vy7" path="res://assets/sfx/Post Apocalyptic Wastelands.ogg" id="1_aa83h"]
+[ext_resource type="Script" path="res://audio_stream_player_2d.gd" id="2_8x5qf"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_aa83h")
+parameters/looping = true
+script = ExtResource("2_8x5qf")
