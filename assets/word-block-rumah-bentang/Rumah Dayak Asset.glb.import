@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://hndjmmnro6ek"
-path="res://.godot/imported/block-rumah-betang.glb-2a2bbd47ec991dd611d541fb15f10b0e.scn"
+uid="uid://ll5ihxwr1x1q"
+path="res://.godot/imported/Rumah Dayak Asset.glb-1c49d429d9c58fbc1dbb1627ea1cdf4f.scn"
 
 [deps]
 
-source_file="res://assets/word-block-rumah-bentang/block-rumah-betang.glb"
-dest_files=["res://.godot/imported/block-rumah-betang.glb-2a2bbd47ec991dd611d541fb15f10b0e.scn"]
+source_file="res://assets/word-block-rumah-bentang/Rumah Dayak Asset.glb"
+dest_files=["res://.godot/imported/Rumah Dayak Asset.glb-1c49d429d9c58fbc1dbb1627ea1cdf4f.scn"]
 
 [params]
 

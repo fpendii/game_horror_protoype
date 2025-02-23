@@ -15,13 +15,13 @@
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_qhx1m"]
 energy_multiplier = 0.3
 
-[sub_resource type="Sky" id="Sky_dwy7g"]
+[sub_resource type="Sky" id="Sky_h88w7"]
 sky_material = SubResource("PanoramaSkyMaterial_qhx1m")
 radiance_size = 2
 
 [sub_resource type="Environment" id="Environment_rwg4c"]
 background_mode = 2
-sky = SubResource("Sky_dwy7g")
+sky = SubResource("Sky_h88w7")
 sky_custom_fov = 41.3
 sky_rotation = Vector3(0, 3.88336, 0)
 tonemap_mode = 2

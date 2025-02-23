@@ -1,8 +1,8 @@
 extends CharacterBody3D
 
 var speed
-const WALK_SPEED = 5.0
-const SPRINT_SPEED = 8.0
+const WALK_SPEED = 2.5
+const SPRINT_SPEED = 5.0
 const JUMP_VELOCITY = 4.5
 const SENSITIVITY = 0.01
 
@@ -23,6 +23,9 @@ var step_interval = 0.6  # Interval untuk langkah kaki dalam detik (default untu
 
 @onready var head = $Head
 @onready var camera = $Head/Camera3D
+
+@onready var flashLight = $Head/Camera3D/FlashLight # variable senter
+
 
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -102,3 +105,8 @@ func play_footstep_sound() -> void:
 func stop_footstep_sound() -> void:
 	if walking_sound_player.playing:
 		walking_sound_player.stop()
+
+func _input(event) -> void:
+	if event.is_action_pressed("toggle_flashlight"):
+		flashLight.toggle_flashlight()
+	

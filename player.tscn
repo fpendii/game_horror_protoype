@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://nxbnbyddxroq"]
+[gd_scene load_steps=6 format=3 uid="uid://nxbnbyddxroq"]
 
 [ext_resource type="Script" path="res://Player2.gd" id="1_jf3g7"]
+[ext_resource type="Script" path="res://flashlight.gd" id="2_k2vbl"]
 [ext_resource type="AudioStream" uid="uid://bp8slhm56mhsq" path="res://assets/sfx/Fantozzi-footsteps/ogg/Fantozzi-SandL2.ogg" id="2_o5awf"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_s84oa"]
@@ -25,10 +26,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.67495, 0)
 
 [node name="Camera3D" type="Camera3D" parent="Player/Head"]
 
-[node name="SpotLight3D" type="SpotLight3D" parent="Player/Head/Camera3D"]
+[node name="FlashLight" type="SpotLight3D" parent="Player/Head/Camera3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0141191, 0, -0.0458889)
+shadow_enabled = true
 spot_range = 15.0
-spot_angle = 30.0
+spot_angle = 48.84
+script = ExtResource("2_k2vbl")
+
+[node name="Timer" type="Timer" parent="Player/Head/Camera3D/FlashLight"]
 
 [node name="WalkingSoundPlayer" type="AudioStreamPlayer2D" parent="Player"]
 stream = ExtResource("2_o5awf")
